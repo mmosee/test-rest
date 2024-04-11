@@ -2,9 +2,16 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-    console.log("testtt");
-    return res.send("hello world")
+    console.log("TestGet")
+    return res.send("hello world");
 })
+
+app.post('/test', function(req, res) {
+    console.log('debug: /test');
+    return res.status(200).json({
+        "test":"test"
+    });
+});
 
 app.post('/save', function(req, res) {
     console.log('debug: /save');
@@ -18,6 +25,6 @@ app.post('/validate', function(req, res) {
     return res.status(200).json({});
 });
 
-app.listen(3000, function () {
-    console.log("server listening on port 3000")
+app.listen(5500, function () {
+    console.log("server listening on port 5500")
 })
