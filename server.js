@@ -13,15 +13,28 @@ app.post('/test', function(req, res) {
     });
 });
 
-app.post('/save', function(req, res) {
-    console.log('debug: /save');
-    return res.status(200).json({
-        "test":"test"
-    });
+app.post('/testSave', function(req, res) {
+    console.log('debug: /testSave');
+    return res.status(200).json({});
 });
 
-app.post('/validate', function(req, res) {
-    console.log('debug: /validate');
+app.post('/testPublish', function(req, res) {
+    console.log('debug: /testPublish');
+    return res.status(200).json({});
+});
+
+app.post('/testValidate', function(req, res) {
+    console.log('debug: /testValidate');
+    return res.status(200).json({});
+});
+
+app.post('/testStop', function(req, res) {
+    console.log('debug: /testStop');
+    return res.status(200).json({});
+});
+
+app.post('/testExecute', function(req, res) {
+    console.log('debug: /testExecute');
     return res.status(200).json({});
 });
 
